@@ -33,6 +33,6 @@ Very brief network analysis of the citation structure of the cases under conside
 
 Computation of inter-case distances based on the document vectors for each case.  Comparison between this approach and the citation-based recommender system.
 
-08. Classification 
+07. Classification 
 
 Classification of cases as originating in the 9th circuit, or not, based solely on document vector information.
