@@ -2,7 +2,7 @@
 
 Capstone Project for General Assembly Data Science Immersive Program
 
-July 2018
+July 12, 2018
 
 # Executive Summary
 
