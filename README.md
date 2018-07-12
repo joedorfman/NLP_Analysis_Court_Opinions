@@ -1,6 +1,6 @@
-# Capstone
+# Using NLP Vectorization Techniques to Analyze Court Opinions
 
-Executive Summary
+# Executive Summary
 
 The goal of my work was to examine the utility of a number of data science tools for an attorney who might be seeking to: (1) Find the central cases from a large collection of cases, (2) Find cases that are similar to those already under consideration, or (3) Sort cases into groups based on some sort of vector representation of the cases that is lower-dimensional than a bag-of-words model.
 
@@ -22,6 +22,8 @@ Much of my work relates to unsupervised methods for characterizing legal opinion
 
 (2) Evaluating whether the vectors are useful for a supervised binary classification task.  Supervised learning on court opinions is generally a labor-intensive project, because it generally requires hand-coding numerous cases based on human legal analysis of each case.  In order to avoid the need for this, I classified cases based on jurisdiction of origin (from the 9th circuit vs. from elsewhere in the country).  To avoid "give away" data such as the name of the judge or the name of the jurisdiction in the text itself, I excised the leading and trailing 500 words of text from each opinion.
 
+## Results
+
 Overall, I found:
 
 (1) Filtering cases based on network centrality, within the network of other cases on the same topic, is a simple and straightforward technique to identify important a subset of important cases.
@@ -34,12 +36,15 @@ Overall, I found:
 
 (5) However, Doc2Vec representations appear to be extremely useful for classification purposes.  Doc2Vec can be trained on cases with binary labels and then individual document vectors can be inferred for training and test set observations, without relying on label information.  These document vectors give good results as features in both a simple logistic regression and a support vector classifier.  I obtained AUC-ROC scores in the high 80s/low 90s.  
 
-Limitations:
+## Limitations:
+
 The training of the neural net to generate Word2Vec and Doc2Vec embeddings did not appear to be deterministic, despite setting a numpy random seed at the beginning of the notebook and (separately) for the train-test split.  Repeated runs on the notebook generate different AUC-ROC values in the range of the high 80s/low 90s.
+
+## Presentation
 
 Please see Capstone presentation.pptx for graphs and further discussion of my work.
 
-Directory of Key Notebooks:
+## Directory of Key Notebooks:
 
 00_Case_Data_from_API.ipynb
 
