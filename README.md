@@ -1,5 +1,9 @@
 # Using NLP Vectorization Techniques to Analyze Court Opinions
 
+Capstone Project for General Assembly Data Science Immersive Program
+
+July 2018
+
 # Executive Summary
 
 The goal of my work was to examine the utility of a number of data science tools for an attorney who might be seeking to: (1) Find the central cases from a large collection of cases, (2) Find cases that are similar to those already under consideration, or (3) Sort cases into groups based on some sort of vector representation of the cases that is lower-dimensional than a bag-of-words model.
