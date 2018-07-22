@@ -1,3 +1,7 @@
 all.csv
 Recommender/
-assets/
+assets/all.csv
+.ipynb_checkpoints
+.DS_Store
+.gitignore
+
